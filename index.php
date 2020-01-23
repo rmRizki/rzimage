@@ -8,7 +8,8 @@ use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=" . getenv('ACCOUNT_NAME') . ";AccountKey=" . getenv('ACCOUNT_KEY');
+// $connectionString = "DefaultEndpointsProtocol=https;AccountName=" . getenv('ACCOUNT_NAME') . ";AccountKey=" . getenv('ACCOUNT_KEY');
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=rizki;AccountKey=geQbFuedfCzw6N41oZ902UwQpa+apjvJ1e9SKy3ofwansxFxaSaLoVkA9bFZYrbN81qswlKigafg8K1Oe4K66A==";
 
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
