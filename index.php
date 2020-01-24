@@ -127,6 +127,8 @@ if (isset($_POST['submit'])) {
         $(this).next('.custom-file-label').html(fileName);
     })
 </script>
+<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="liff-starter.js"></script>
 <?php
 if (!empty($_GET['containerName'])) {
 ?>
@@ -164,6 +166,19 @@ if (!empty($_GET['containerName'])) {
             .done(function(data) {
                 // Show formatted JSON on webpage.
                 $("#captions").text(data['description']['captions'][0]['text']);
+
+                if (!liff.isInClient()) {
+                    console.log('Web is opened in external browser');
+                } else {
+                    liff.sendMessages([{
+                        'type': 'text',
+                        'text': "Analyzed Image : " + data['description']['captions'][0]['text']
+                    }]).then(function() {
+                        window.alert('Image Analyzed!');
+                    }).catch(function(error) {
+                        window.alert('Error sending message: ' + error);
+                    });
+                }
             })
 
             .fail(function(jqXHR, textStatus, errorThrown) {
