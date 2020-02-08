@@ -1,6 +1,6 @@
 # rzimage
 
-### uploading and analyzing image using azure storage &amp; computer vision.  
+uploading and analyzing image using azure storage &amp; computer vision.  
 
 ## Links
 
