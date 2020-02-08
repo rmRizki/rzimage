@@ -1,6 +1,8 @@
-# [rzimage](https://rzimage.azurewebsites.net)  
+# rzimage
 
 ### uploading and analyzing image using azure storage &amp; computer vision.  
+
+## Links
 
 **URL** : https://rzimage.azurewebsites.net
 
